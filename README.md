@@ -1,25 +1,64 @@
-I have Hosted my React web App in Ec2 Instance 
-#Server Creation
-I have created a EC2 ubunutu server 
-i hvae installed node and npm For running my project
-and installed pm2 
-teh i have clone the project repo from  the git 
-then enter in to the project 
-and then using the command npx expo export i have export project 
-i have run the project with the comnmand pm2 serve dist 80 --name TaskManager
-and the project is succesfully running 
+# TaskManager - React Web App Deployment on AWS EC2
 
-<img width="1352" height="699" alt="Screenshot 2025-08-21 122337" src="https://github.com/user-attachments/assets/8e9a3102-444d-469e-90b8-b93171f21c3d" />
+## 📝 Project Overview
 
--------------------docker-----------------------------------------
-#Server Creation
-I have created a EC2 ubunutu server
-i hvae installed node and npm For running my project
-i have installed docker also
-then i have clone the project repo from  the git 
-then i have create the docker image by using the command 
-docker build -t taskmanager .
-then i hav erun the docker image 
-docker run -d -p 80:3000 --name taskmanger
-docker ps to check the running containers
+TaskManager is a cross-platform app built using React and Expo. This repo documents how the **web version** of the app is deployed to an **AWS EC2 Ubuntu instance**, using both:
+
+- **PM2** – to serve the exported static files
+- **Docker** – to containerize and run the app
+
+---
+
+## 🖼️ Architecture
+
+- Frontend: Expo (React) Web App
+- Deployment: AWS EC2 (Ubuntu)
+- Methods:
+  - PM2 (serving static files)
+  - Docker (containerized Node-based server)
+
+Update packages & install Node.js and npm:
+sudo apt update
+sudo apt install nodejs npm -y
+
+Clone your repo:
+git clone <your-repo-url>
+Cd your repo
+
+PM2 Deployment
+Step 1: Install PM2 & dependencies
+sudo npm install -g pm2 serve
+npm install
+
+Step 2: Export the Expo web build
+npx expo export
+A Dist folder will be created 
+
+Step 3: Serve the app on port 80 with PM2
+pm2 serve dist 80 --name TaskManager
+
+step 4: list the running projects
+pm2 list
+
+<img width="1352" height="699" alt="Screenshot 2025-08-21 122337" src="https://github.com/user-attachments/assets/cfbf2dc0-85cb-45b3-a6e3-1ac6a76c3757" />
+
+
+🐳 Docker Deployment
+Step 1: Install Docker
+sudo apt install docker.io -y
+sudo systemctl start docker
+sudo systemctl enable docker
+
+cloned the project form the github the docker file is already present in the project 
+
+Step 2: Build the Docker Image
+docker build -t taskmanger .
+
+Step 3: Run the Container
+docker run -d -p 80:3000 --name taskmanager
+
+To see the running containers 
+docker ps
+
+
 
