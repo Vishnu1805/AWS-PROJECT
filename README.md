@@ -65,5 +65,7 @@ docker run -d -p 3000:80 taskmanager
 To see the running containers 
 docker ps
 
+<img width="1353" height="674" alt="image" src="https://github.com/user-attachments/assets/6e2de262-d1dd-46e2-b7c4-a6b1bc5ee124" />
+
 
 
