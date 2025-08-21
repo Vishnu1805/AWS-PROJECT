@@ -40,7 +40,8 @@ pm2 serve dist 80 --name TaskManager
 step 4: list the running projects
 pm2 list
 
-<img width="1352" height="699" alt="Screenshot 2025-08-21 122337" src="https://github.com/user-attachments/assets/cfbf2dc0-85cb-45b3-a6e3-1ac6a76c3757" />
+<img width="1352" height="699" alt="Screenshot 2025-08-21 122337" src="https://github.com/user-attachments/assets/754a630b-e060-46b9-b135-a7cb296f7500" />
+
 
 
 
