@@ -60,7 +60,7 @@ Step 2: Build the Docker Image
 docker build -t taskmanger .
 
 Step 3: Run the Container
-docker run -d -p 80:3000 --name taskmanager
+docker run -d -p 3000:80 taskmanager
 
 To see the running containers 
 docker ps
