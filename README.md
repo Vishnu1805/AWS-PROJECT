@@ -43,6 +43,10 @@ pm2 list
 <img width="1352" height="699" alt="Screenshot 2025-08-21 122337" src="https://github.com/user-attachments/assets/cfbf2dc0-85cb-45b3-a6e3-1ac6a76c3757" />
 
 
+
+
+
+
 🐳 Docker Deployment
 Step 1: Install Docker
 sudo apt install docker.io -y
